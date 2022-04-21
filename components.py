@@ -1,7 +1,6 @@
 # This notebook goes through some netplotbrain examples to plot each component individually and then together
 
 # Import everything needed
-import numpy as np
 import netplotbrain
 import pandas as pd
 import matplotlib.pyplot as plt
