@@ -81,4 +81,4 @@ netplotbrain.plot(nodes=atlasinfo,
                  title='',
                  fig=fig, ax=ax)
 
-fig.savefig('./figures/showcase.png', dpi=150)
+fig.savefig('./figures/single_components.png', dpi=150)
