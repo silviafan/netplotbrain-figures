@@ -260,6 +260,85 @@ netplotbrain.plot(nodes=nodes_inf,
                   arrowaxis=[],
                   title='Infant template',
                   fig=fig, ax=ax)
+                  
 plt.show()
 ```
 ![](./figures/diff_tftemplates.png)
+
+### Plot different views and rotations
+
+#### Multiple views on multiple rows
+
+```python
+netplotbrain.plot(nodes=atlasinfo,
+                  nodeimg={'atlas': 'Schaefer2018',
+                            'desc': '100Parcels7Networks',
+                            'resolution': 1},
+                  edges=edges,
+                  edgescale=5,
+                  template='MNI152NLin6Asym',
+                  templatestyle='glass',
+                  template_glass_maxalpha=0.03,
+                  view=['LSR', 'AIP'],
+                  nodecolorby='yeo7networks',
+                  nodecmap='inferno',
+                  nodetype='circles',
+                  nodescale=10,
+                  nodealpha=1,
+                  showlegend=False)
+                  
+plt.show()
+```
+![](./figures/views.png)
+
+#### AP rotation with 6 frames
+
+```python
+netplotbrain.plot(nodes=atlasinfo,
+                  nodeimg={'atlas': 'Schaefer2018',
+                            'desc': '100Parcels7Networks',
+                            'resolution': 1},
+                  edges=edges,
+                  edgescale=5,
+                  template='MNI152NLin6Asym',
+                  templatestyle='glass',
+                  template_glass_maxalpha=0.03,
+                  templatecolor='black',
+                  view=['AP'],
+                  frames=6,
+                  nodecolorby='yeo7networks',
+                  nodecmap='cividis',
+                  nodetype='circles',
+                  nodescale=10,
+                  nodealpha=1,
+                  showlegend=False)
+                  
+plt.show()
+```
+![](./figures/rotation_6frames.png)
+
+#### AP rotation with 6 frames
+
+```python
+netplotbrain.plot(nodes=atlasinfo,
+                  nodeimg={'atlas': 'Schaefer2018',
+                            'desc': '100Parcels7Networks',
+                            'resolution': 1},
+                  edges=edges,
+                  edgescale=5,
+                  template='MNI152NLin6Asym',
+                  templatestyle='glass',
+                  template_glass_maxalpha=0.03,
+                  templatecolor='black',
+                  view=['AP'],
+                  frames=4,
+                  nodecolorby='yeo7networks',
+                  nodecmap='cividis',
+                  nodetype='circles',
+                  nodescale=10,
+                  nodealpha=1,
+                  showlegend=False)
+                  
+plt.show()
+```
+![](./figures/rotation_4frames.png)
