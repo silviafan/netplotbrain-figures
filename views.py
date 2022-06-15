@@ -38,7 +38,7 @@ netplotbrain.plot(nodes=atlasinfo,
 
 plt.savefig('./figures/views.png', dpi=150)
 
-# Rotations AP with 6 frames
+# Rotations AP with 8 frames
 netplotbrain.plot(nodes=atlasinfo,
                   nodeimg={'atlas': 'Schaefer2018',
                             'desc': '100Parcels7Networks',
@@ -50,17 +50,18 @@ netplotbrain.plot(nodes=atlasinfo,
                   template_glass_maxalpha=0.03,
                   templatecolor='black',
                   view=['AP'],
-                  frames=6,
+                  frames=8,
                   nodecolorby='yeo7networks',
                   nodecmap='cividis',
                   nodetype='circles',
                   nodescale=10,
                   nodealpha=1,
+                  arrowaxis=None,
                   showlegend=False)
 
-plt.savefig('./figures/rotation_6frames.png', dpi=150)
+plt.savefig('./figures/rotation_8frames.png', dpi=300)
 
-# Rotations AP with 4 frames
+# Rotations AP with 5 frames
 netplotbrain.plot(nodes=atlasinfo,
                   nodeimg={'atlas': 'Schaefer2018',
                             'desc': '100Parcels7Networks',
@@ -72,12 +73,13 @@ netplotbrain.plot(nodes=atlasinfo,
                   template_glass_maxalpha=0.03,
                   templatecolor='black',
                   view=['AP'],
-                  frames=4,
+                  frames=5,
                   nodecolorby='yeo7networks',
                   nodecmap='cividis',
                   nodetype='circles',
                   nodescale=10,
                   nodealpha=1,
+                  arrowaxis=None,
                   showlegend=False)
 
-plt.savefig('./figures/rotation_4frames.png', dpi=150)
+plt.savefig('./figures/rotation_5frames.png', dpi=300)
