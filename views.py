@@ -34,9 +34,10 @@ netplotbrain.plot(nodes=atlasinfo,
                   nodetype='circles',
                   nodescale=10,
                   nodealpha=1,
+                  arrowaxis=None,
                   showlegend=False)
 
-plt.savefig('./figures/views.png', dpi=150)
+plt.savefig('./figures/views.jpg', dpi=300)
 
 # Rotations AP with 8 frames
 netplotbrain.plot(nodes=atlasinfo,
