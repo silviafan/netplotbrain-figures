@@ -290,7 +290,7 @@ netplotbrain.plot(nodes=atlasinfo,
                   
 plt.show()
 ```
-![](./figures/views.png)
+![](./figures/views.jpg)
 
 #### AP rotation with 8 frames
 
