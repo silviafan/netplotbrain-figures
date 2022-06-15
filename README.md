@@ -291,7 +291,7 @@ plt.show()
 ```
 ![](./figures/views.png)
 
-#### AP rotation with 6 frames
+#### AP rotation with 8 frames
 
 ```python
 netplotbrain.plot(nodes=atlasinfo,
@@ -305,19 +305,20 @@ netplotbrain.plot(nodes=atlasinfo,
                   template_glass_maxalpha=0.03,
                   templatecolor='black',
                   view=['AP'],
-                  frames=6,
+                  frames=8,
                   nodecolorby='yeo7networks',
                   nodecmap='cividis',
                   nodetype='circles',
                   nodescale=10,
                   nodealpha=1,
+                  arrowaxis=None,
                   showlegend=False)
                   
 plt.show()
 ```
-![](./figures/rotation_6frames.png)
+![](./figures/rotation_8frames.png)
 
-#### AP rotation with 6 frames
+#### AP rotation with 5 frames
 
 ```python
 netplotbrain.plot(nodes=atlasinfo,
@@ -331,14 +332,15 @@ netplotbrain.plot(nodes=atlasinfo,
                   template_glass_maxalpha=0.03,
                   templatecolor='black',
                   view=['AP'],
-                  frames=4,
+                  frames=5,
                   nodecolorby='yeo7networks',
                   nodecmap='cividis',
                   nodetype='circles',
                   nodescale=10,
                   nodealpha=1,
+                  arrowaxis=None,
                   showlegend=False)
                   
 plt.show()
 ```
-![](./figures/rotation_4frames.png)
+![](./figures/rotation_5frames.png)
