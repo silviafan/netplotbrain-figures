@@ -285,6 +285,7 @@ netplotbrain.plot(nodes=atlasinfo,
                   nodetype='circles',
                   nodescale=10,
                   nodealpha=1,
+                  arrowaxis=None,
                   showlegend=False)
                   
 plt.show()
