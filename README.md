@@ -257,7 +257,7 @@ netplotbrain.plot(nodes=nodes_inf,
                   
 plt.show()
 ```
-![](./figures/diff_tftemplates.png)
+![](./figures/diff_tftemplates_test.png)
 
 ### Plot different views and rotations
 
