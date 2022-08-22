@@ -45,4 +45,4 @@ netplotbrain.plot(template='MNI152NLin6Asym',
                   template_glass_maxalpha=0.035,
                   fig=fig, ax=ax)
 
-fig.savefig('/Users/silfan/Documents/GitHub/netplotbrain-figures/figures/template_styles.png', dpi=300)
+fig.savefig('./figures/template_styles.png', dpi=300)
