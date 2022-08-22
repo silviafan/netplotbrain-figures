@@ -4,17 +4,6 @@
 import netplotbrain
 import pandas as pd
 import matplotlib.pyplot as plt
-import templateflow.api as tf
-
-# Example node and edges dataframes
-atlasinfo = tf.get(template='MNI152NLin6Asym',
-       atlas='Schaefer2018',
-       desc='100Parcels7Networks',
-       extension='.tsv')
-atlasinfo = pd.read_csv(atlasinfo, sep='\t')
-# Parse the info in to get network names
-networks = list(map(lambda x: x.split('_')[2], atlasinfo.name.values))
-atlasinfo['yeo7networks'] = networks
 
 # Example node and edges dataframes
 
@@ -22,26 +11,22 @@ fig  = plt.figure()
 
 # Adult brain
 ax = fig.add_subplot(131, projection='3d')
-netplotbrain.plot(nodes=atlasinfo,
-                  nodeimg={'atlas': 'Schaefer2018',
-                            'desc': '100Parcels7Networks',
-                            'resolution': 1},
+netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
+                         'desc': '100Parcels7Networks',
+                         'resolution': 1},
                   template='MNI152NLin6Asym',
-                  templatestyle='glass',
-                  template_glass_maxalpha=0.05,
-                  templatecolor='black',
-                  view='R',
-                  nodecolorby='yeo7networks',
-                  nodecmap='Set3',
-                  nodetype='spheres',
-                  nodealpha=0.4,
-                  arrowaxis=[],
+                  templatestyle='surface',
+                  view='S',
+                  nodecolor='blue',
+                  nodealpha=1,
+                  nodescale=15,
+                  arrowaxis=None,
                   showlegend=False,
-                  title='Adult template',
+                  subtitles='Adult template MNI152NLin6Asym',
                   fig=fig, ax=ax)
 
 # Example node dataframe
-nodes = pd.read_csv('./nodes.tsv', sep='\t', index_col=0)
+nodes = pd.read_csv('./example_nodes.tsv', sep='\t', index_col=0)
 
 # Rat template
 nodes_whs = nodes.copy()
@@ -53,15 +38,14 @@ ax = fig.add_subplot(132, projection='3d')
 netplotbrain.plot(nodes=nodes_whs,
                   template='WHS',
                   templatestyle='surface',
-                  templatecolor='black',
-                  templatevoxsize=0.2,
+                  templatealpha=0.3,
                   view='S',
-                  nodescale=20,
-                  nodecolorby='community',
+                  nodescale=15,
+                  nodecolor='blue',
                   nodealpha=1,
-                  arrowaxis=[],
+                  arrowaxis=None,
                   showlegend=False,
-                  title='Rat template',
+                  subtitles='Rat template WHS',
                   fig=fig, ax=ax)
 
 # Infant template
@@ -73,17 +57,15 @@ nodes_inf['z'] = nodes_inf['z'] / 1.25
 # Setting a larger templatevoxsize will make it slightly quicker
 ax = fig.add_subplot(133, projection='3d')
 netplotbrain.plot(nodes=nodes_inf,
-                  template='MNIInfant',
-                  templatestyle='filled',
-                  templatecolor='black',
-                  view='L',
-                  nodecolorby='community',
-                  nodescale=40,
-                  templatevoxsize=1,
+                  template='MNIInfant_cohort-3',
+                  templatestyle='surface',
+                  templatealpha=0.3,
+                  view='S',
+                  nodecolor='blue',
+                  nodescale=15,
                   showlegend=False,
-                  arrowaxis=[],
-                  title='Infant template',
+                  arrowaxis=None,
+                  subtitles='Infant template MNIInfant',
                   fig=fig, ax=ax)
 
 fig.savefig('./figures/diff_tftemplates.png', dpi=150)
-
