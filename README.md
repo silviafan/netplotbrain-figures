@@ -98,40 +98,43 @@ plt.show()
 ```python
 fig = plt.figure()
 
-# Surface style 
+# Plot surface style 
 ax = fig.add_subplot(141, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='surface',
                   view='A',
-                  arrowaxis=[],
-                  title='surface',
+                  arrowaxis=None,
+                  subtitles='surface',
                   fig=fig, ax=ax)
 
-# Filled style 
+# Plot filled style 
 ax = fig.add_subplot(142, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='filled',
                   view='A',
-                  arrowaxis=[],
-                  title='filled',
+                  arrowaxis=None,
+                  subtitles='filled',
                   fig=fig, ax=ax)
 
-# Cloudy style 
+# Plot cloudy style 
 ax = fig.add_subplot(143, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='cloudy',
+                  templatevoxelsize=2,
+                  templatealpha=0.065,
                   view='A',
-                  arrowaxis=[],
-                  title='cloudy',
+                  arrowaxis=None,
+                  subtitles='cloudy',
                   fig=fig, ax=ax)
 
-# Glass style 
+# Plot glass style 
 ax = fig.add_subplot(144, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='glass',
                   view='A',
-                  arrowaxis=[],
-                  title='glass',
+                  arrowaxis=None,
+                  subtitles='glass',
+                  template_glass_maxalpha=0.035,
                   fig=fig, ax=ax)
 plt.show()
 ```
