@@ -328,78 +328,87 @@ plt.show()
 #### Multiple views on multiple rows
 
 ```python
-netplotbrain.plot(nodes=atlasinfo,
-                  nodeimg={'atlas': 'Schaefer2018',
-                            'desc': '100Parcels7Networks',
-                            'resolution': 1},
+# 6 views
+netplotbrain.plot(nodes=nodes,
                   edges=edges,
                   edgescale=5,
                   template='MNI152NLin6Asym',
                   templatestyle='glass',
-                  template_glass_maxalpha=0.03,
-                  view=['LSR', 'AIP'],
-                  nodecolorby='yeo7networks',
-                  nodecmap='inferno',
+                  template_glass_maxalpha=0.07,
+                  view='preset-6',
+                  nodecolor='community',
+                  nodecmap='viridis',
                   nodetype='circles',
-                  nodescale=10,
+                  nodescale=12,
                   nodealpha=1,
                   arrowaxis=None,
                   showlegend=False)
                   
 plt.show()
 ```
-![](./figures/views.jpg)
-
-#### AP rotation with 8 frames
+![](./figures/preset6.png)
 
 ```python
-netplotbrain.plot(nodes=atlasinfo,
-                  nodeimg={'atlas': 'Schaefer2018',
-                            'desc': '100Parcels7Networks',
-                            'resolution': 1},
+# 4 views
+netplotbrain.plot(nodes=nodes,
                   edges=edges,
                   edgescale=5,
                   template='MNI152NLin6Asym',
                   templatestyle='glass',
-                  template_glass_maxalpha=0.03,
-                  templatecolor='black',
-                  view=['AP'],
-                  frames=8,
-                  nodecolorby='yeo7networks',
-                  nodecmap='cividis',
+                  template_glass_maxalpha=0.07,
+                  view='preset-4',
+                  nodecolor='community',
+                  nodecmap='viridis',
                   nodetype='circles',
-                  nodescale=10,
+                  nodescale=12,
                   nodealpha=1,
                   arrowaxis=None,
                   showlegend=False)
                   
 plt.show()
 ```
-![](./figures/rotation_8frames.png)
+![](./figures/preset4.png)
+
+#### AP rotation with 4 frames
+
+```python
+netplotbrain.plot(nodes=nodes,
+                  edges=edges,
+                  edgescale=5,
+                  template='MNI152NLin6Asym',
+                  templatestyle='glass',
+                  template_glass_maxalpha=0.07,
+                  view=['AP'],
+                  frames=4,
+                  nodecolor='community',
+                  nodecmap='cividis',
+                  nodetype='circles',
+                  nodescale=12,
+                  nodealpha=1,
+                  showlegend=False)
+                  
+plt.show()
+```
+![](./figures/4framesrot.png)
 
 #### AP rotation with 5 frames
 
 ```python
-netplotbrain.plot(nodes=atlasinfo,
-                  nodeimg={'atlas': 'Schaefer2018',
-                            'desc': '100Parcels7Networks',
-                            'resolution': 1},
+netplotbrain.plot(nodes=nodes,
                   edges=edges,
                   edgescale=5,
                   template='MNI152NLin6Asym',
                   templatestyle='glass',
-                  template_glass_maxalpha=0.03,
-                  templatecolor='black',
+                  template_glass_maxalpha=0.07,
                   view=['AP'],
                   frames=5,
-                  nodecolorby='yeo7networks',
+                  nodecolor='community',
                   nodecmap='cividis',
                   nodetype='circles',
-                  nodescale=10,
+                  nodescale=12,
                   nodealpha=1,
-                  arrowaxis=None,
                   showlegend=False)
                   
 plt.show()
 ```
-![](./figures/rotation_5frames.png)
+![](./figures/5framesrot.png)
