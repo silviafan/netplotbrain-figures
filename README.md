@@ -10,17 +10,9 @@ import matplotlib.pyplot as plt
 import templateflow.api as tf
 
 # Node and edge dataframes 
-atlasinfo = tf.get(template='MNI152NLin6Asym',
-       atlas='Schaefer2018',
-       desc='100Parcels7Networks',
-       extension='.tsv')
-atlasinfo = pd.read_csv(atlasinfo, sep='\t')
-# Parse the info in to get network names
-networks = list(map(lambda x: x.split('_')[2], atlasinfo.name.values))
-atlasinfo['yeo7networks'] = networks
 
-nodes = pd.read_csv('./nodes.tsv', sep='\t', index_col=0)
-edges = pd.read_csv('./edges.tsv', sep='\t', index_col=0)
+nodes = pd.read_csv('./example_nodes.tsv', sep='\t', index_col=0)
+edges = pd.read_csv('./example_edges.tsv', sep='\t', index_col=0)
 
 ```
 
@@ -147,49 +139,47 @@ fig = plt.figure()
 
 # Circles
 ax = fig.add_subplot(131, projection='3d')
-netplotbrain.plot(nodeimg={'atlas': 'Schaefer2018',
+netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                             'desc': '100Parcels7Networks',
                             'resolution': 1},
                   template='MNI152NLin6Asym',
                   templatestyle='glass',
                   template_glass_maxalpha=0.03,
                   view='S',
-                  nodecolor='blue',
                   nodetype='circles',
                   nodescale=40,
                   nodealpha=1,
-                  arrowaxis=[],
+                  arrowaxis=None,
                   title='Circles',
                   fig=fig, ax=ax)
 
 # Spheres
 ax = fig.add_subplot(132, projection='3d')
-netplotbrain.plot(nodeimg={'atlas': 'Schaefer2018',
+netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                             'desc': '100Parcels7Networks',
                             'resolution': 1},
                   template='MNI152NLin6Asym',
                   templatestyle='glass',
                   template_glass_maxalpha=0.03,
                   view='S',
-                  nodecolor='blue',
                   nodetype='spheres',
                   nodealpha=1,
-                  arrowaxis=[],
+                  arrowaxis=None,
                   title='Spheres',
                   fig=fig, ax=ax)
 
 # Parcels
 ax = fig.add_subplot(133, projection='3d')
-netplotbrain.plot(nodeimg={'atlas': 'Schaefer2018',
+netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                            'desc': '100Parcels7Networks',
                            'resolution': 1},
                   template='MNI152NLin6Asym',
                   templatestyle=None,
-                  view=['S'],
+                  view='S',
                   nodetype='parcels',
                   nodealpha=1,
                   nodecolor='tab20c',
-                  arrowaxis=[],
+                  arrowaxis=None,
                   title='Parcels',
                   fig=fig, ax=ax)
 
