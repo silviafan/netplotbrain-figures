@@ -1,4 +1,4 @@
-# Plotting different template styles
+# Plotting hemispheres
 
 # Import everything needed
 import netplotbrain
