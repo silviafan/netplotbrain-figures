@@ -9,7 +9,7 @@ nodes = pd.read_csv('./example_nodes.tsv', sep='\t', index_col=0)
 edges = pd.read_csv('./example_edges.tsv', sep='\t', index_col=0)
 
 
-# 8 views on multiple rows
+# 6 views on multiple rows
 netplotbrain.plot(nodes=nodes,
                   edges=edges,
                   edgescale=5,
