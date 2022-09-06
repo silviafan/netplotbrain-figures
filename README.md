@@ -128,25 +128,7 @@ plt.show()
 ```
 ![](./figures/template_styles.png)
 
-### Plot hemispheres and whole brain
-
-```python
-fig = plt.figure()
-
-### Plot hemispheres and whole brain
-netplotbrain.plot(template='MNI152NLin6Asym',
-                  templatestyle='surface',
-                  view=['SSS'],
-                  hemisphere=['L', 'R', ''],
-                  nodecolor='darkcyan',
-                  subtitles=['left hemisphere', 'right hemisphere', 'whole brain'],
-                  nodes=nodes,
-                  arrowaxis=None,
-                  edges=edges)
-                  
-plt.show()
-```
-![](./figures/hemispheres.png)
+### Plot different node styles
 
 ```python
 fig = plt.figure()
