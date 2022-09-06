@@ -1,4 +1,4 @@
-# This notebook goes through some netplotbrain examples to plot each component individually and then together
+# Plot each component individually and then together
 
 # Import everything needed
 import netplotbrain
@@ -18,6 +18,7 @@ netplotbrain.plot(template='MNI152NLin6Asym',
                   templatealpha=0.08,
                   view='L',
                   arrowaxis=None,
+                  subitles=None,
                   fig=fig, ax=ax)
 
 # Plot only nodes
