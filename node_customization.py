@@ -9,7 +9,7 @@ nodes = pd.read_csv('./example_nodes.tsv', sep='\t', index_col=0)
 
 fig  = plt.figure()
 
-# Plot 10 nodes with the same color
+# Plot 16 nodes with the same color
 ax = fig.add_subplot(131, projection='3d')
 netplotbrain.plot(nodes=nodes,
                   template='MNI152NLin6Asym',
@@ -23,7 +23,7 @@ netplotbrain.plot(nodes=nodes,
                   subtitles=None,
                   fig=fig, ax=ax)
 
-# Plot 10 nodes colored by their community of origin
+# Plot 16 nodes colored by their community of origin
 ax = fig.add_subplot(132, projection='3d')
 netplotbrain.plot(nodes=nodes,
                   template='MNI152NLin6Asym',
@@ -39,7 +39,7 @@ netplotbrain.plot(nodes=nodes,
                   nodecolorlegend=False,
                   fig=fig, ax=ax)
 
-# Plot 10 nodes colored by their community of origin and re-sized according to centrality measure
+# Plot 16 nodes colored by their community of origin and re-sized according to centrality measure
 ax = fig.add_subplot(133, projection='3d')
 netplotbrain.plot(nodes=nodes,
                   template='MNI152NLin6Asym',
