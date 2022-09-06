@@ -15,13 +15,12 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                             'resolution': 1},
                   template='MNI152NLin6Asym',
                   templatestyle='glass',
-                  template_glass_maxalpha=0.03,
                   view='S',
                   nodetype='circles',
                   nodescale=40,
                   nodealpha=1,
                   arrowaxis=None,
-                  title='Circles',
+                  title='circles',
                   fig=fig, ax=ax)
 
 # Spheres
@@ -31,12 +30,11 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                             'resolution': 1},
                   template='MNI152NLin6Asym',
                   templatestyle='glass',
-                  template_glass_maxalpha=0.03,
                   view='S',
                   nodetype='spheres',
                   nodealpha=1,
                   arrowaxis=None,
-                  title='Spheres',
+                  title='spheres',
                   fig=fig, ax=ax)
 
 # Parcels
@@ -51,7 +49,7 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                   nodealpha=1,
                   nodecolor='tab20c',
                   arrowaxis=None,
-                  title='Parcels',
+                  title='parcels',
                   fig=fig, ax=ax)
 
 fig.savefig('./figures/node_types.png', dpi=300)
