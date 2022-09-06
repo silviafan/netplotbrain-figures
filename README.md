@@ -245,48 +245,53 @@ plt.show()
 ### Plot different templates pulled from TemplateFlow
 
 ```python
-fig = plt.figure()
-
 # Adult brain MNI152NLin6Asym
-ax = fig.add_subplot(141, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='glass',
                   view='L',
                   arrowaxis=None,
-                  subtitles='MNI152NLin6Asym',
-                  fig=fig, ax=ax)
+                  subtitles='MNI152NLin6Asym')
+                  
+plt.show()
+```
+![](./figures/adultMNI.png)
 
+```python
 # Infant template MNIInfant_cohort-3
 # Setting a larger templatevoxsize will make it slightly quicker
-ax = fig.add_subplot(142, projection='3d')
 netplotbrain.plot(template='MNIInfant_cohort-3',
                   templatestyle='glass',
                   view='L',
                   arrowaxis=None,
-                  subtitles='MNIInfant_cohort-3',
-                  fig=fig, ax=ax)
+                  subtitles='MNIInfant_cohort-3')
 
+plt.show()
+```
+![](./figures/infantMNIcohort3.png)
+
+```python
 # Rat template WHS
-ax = fig.add_subplot(143, projection='3d')
 netplotbrain.plot(template='WHS',
                   templatestyle='glass',
                   view='L',
                   arrowaxis=None,
-                  subtitles='WHS',
-                  fig=fig, ax=ax)
+                  subtitles='WHS')
+                  
+plt.show()
+```
+![](./figures/ratWHS.png)               
 
+```python
 # Squirrel monkey VALiDATe29 
-ax = fig.add_subplot(144, projection='3d')
 netplotbrain.plot(template='VALiDATe29',
                   templatestyle='glass',
                   view='L',
                   arrowaxis=None,
-                  subtitles='VALiDATe29',
-                  fig=fig, ax=ax)
+                  subtitles='VALiDATe29')
                   
 plt.show()
 ```
-![](./figures/diff_tftemplates.png)
+![](./figures/squirrelmonkeyValidate29.png)
 
 ### Plot different views and rotations
 
