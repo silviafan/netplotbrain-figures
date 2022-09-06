@@ -27,6 +27,7 @@ netplotbrain.plot(template='MNI152NLin6Asym',
                   templatealpha=0.08,
                   view='L',
                   arrowaxis=None,
+                  subitles=None,
                   fig=fig, ax=ax)
 
 # Plot only nodes
@@ -42,6 +43,7 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                   arrowaxis=None,
                   subtitles=None,
                   fig=fig, ax=ax)
+                  
 # Plot only edges
 ax = fig.add_subplot(143, projection='3d')
 netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
