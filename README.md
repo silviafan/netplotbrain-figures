@@ -87,37 +87,40 @@ plt.show()
 ### Plot different template styles
 
 ```python
-fig = plt.figure()
-
 # Plot glass style 
-ax = fig.add_subplot(141, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='glass',
                   view='S',
                   arrowaxis=None,
-                  subtitles='glass',
-                  fig=fig, ax=ax)
+                  subtitles='glass')
+ plt.show()
+ ```
+![](./figures/glass_template.png)
 
+```python
 # Plot surface style 
-ax = fig.add_subplot(142, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='surface',
                   view='S',
                   arrowaxis=None,
-                  subtitles='surface',
-                  fig=fig, ax=ax)
+                  subtitles='surface')
+plt.show()
+ ```
+![](./figures/surface_template.png)
 
+```python
 # Plot filled style 
-ax = fig.add_subplot(143, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='filled',
                   view='S',
                   arrowaxis=None,
-                  subtitles='filled',
-                  fig=fig, ax=ax)
+                  subtitles='filled')
+plt.show()
+ ```
+![](./figures/filled_template.png)
 
+```python
 # Plot cloudy style 
-ax = fig.add_subplot(144, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
                   templatestyle='cloudy',
                   templatevoxelsize=2,
@@ -125,11 +128,10 @@ netplotbrain.plot(template='MNI152NLin6Asym',
                   view='S',
                   templateedgethreshold=0.6,
                   arrowaxis=None,
-                  subtitles='cloudy',
-                  fig=fig, ax=ax)
+                  subtitles='cloudy')
 plt.show()
 ```
-![](./figures/template_styles.png)
+![](./figures/cloudy_template.png)
 
 ### Plot different node types
 
