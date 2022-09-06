@@ -20,7 +20,7 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                   nodescale=40,
                   nodealpha=1,
                   arrowaxis=None,
-                  title='circles',
+                  subtitles='circles',
                   fig=fig, ax=ax)
 
 # Spheres
@@ -34,7 +34,7 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                   nodetype='spheres',
                   nodealpha=1,
                   arrowaxis=None,
-                  title='spheres',
+                  subtitles='spheres',
                   fig=fig, ax=ax)
 
 # Parcels
@@ -49,7 +49,7 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                   nodealpha=1,
                   nodecolor='tab20c',
                   arrowaxis=None,
-                  title='parcels',
+                  subtitles='parcels',
                   fig=fig, ax=ax)
 
 fig.savefig('./figures/node_types.png', dpi=300)
