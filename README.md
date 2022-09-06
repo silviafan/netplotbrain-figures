@@ -426,3 +426,4 @@ netplotbrain.plot(template='MNI152NLin2009cAsym',
 plt.show()
 ```
 ![](./figures/springlayout.png)
+
