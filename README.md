@@ -415,11 +415,12 @@ netplotbrain.plot(template='MNI152NLin2009cAsym',
                   nodes_df=atlasinfo,
                   edges=edges,
                   view='LSs',
-                  templatestyle='glass',
-                  nodescale=20,
-                  nodecolor='yeo7networks',
-                  edgethreshold=0,
-                  edgethresholddirection='>',
+                  template_style='glass',
+                  node_scale=20,
+                  node_color='yeo7networks',
+                  edge_threshold=0,
+                  edge_alpha=0.2,
+                  edge_thresholddirection='>',
                   seed=2022)
 plt.show()
 ```
