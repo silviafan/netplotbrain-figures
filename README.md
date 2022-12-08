@@ -251,11 +251,11 @@ plt.show()
 ```python
 # Adult brain MNI152NLin6Asym
 netplotbrain.plot(template='MNI152NLin6Asym',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='L',
                   arrowaxis=None,
-                  subtitles='MNI152NLin6Asym')
-                  
+                  title='MNI152NLin6Asym',
+                  subtitles=None)                
 plt.show()
 ```
 ![](./figures/adultMNI.png)
@@ -264,11 +264,11 @@ plt.show()
 # Infant template MNIInfant_cohort-3
 # Setting a larger templatevoxsize will make it slightly quicker
 netplotbrain.plot(template='MNIInfant_cohort-3',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='L',
                   arrowaxis=None,
-                  subtitles='MNIInfant_cohort-3')
-
+                  title='MNIInfant_cohort-3',
+                  subtitles=None)
 plt.show()
 ```
 ![](./figures/infantMNIcohort3.png)
@@ -276,11 +276,11 @@ plt.show()
 ```python
 # Rat template WHS
 netplotbrain.plot(template='WHS',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='L',
                   arrowaxis=None,
-                  subtitles='WHS')
-                  
+                  title='WHS',
+                  subtitles=None)                  
 plt.show()
 ```
 ![](./figures/ratWHS.png)               
@@ -288,11 +288,11 @@ plt.show()
 ```python
 # Squirrel monkey VALiDATe29 
 netplotbrain.plot(template='VALiDATe29',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='L',
                   arrowaxis=None,
-                  subtitles='VALiDATe29')
-                  
+                  title='VALiDATe29',
+                  subtitles=None)                  
 plt.show()
 ```
 ![](./figures/squirrelmonkeyValidate29.png)
