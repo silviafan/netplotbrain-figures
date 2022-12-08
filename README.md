@@ -136,55 +136,57 @@ plt.show()
 ### Plot different node types
 
 ```python
-fig = plt.figure()
-
 # Circles
-ax = fig.add_subplot(131, projection='3d')
 netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                             'desc': '100Parcels7Networks',
                             'resolution': 1},
                   template='MNI152NLin6Asym',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='S',
-                  nodetype='circles',
-                  nodescale=40,
-                  nodealpha=1,
+                  node_type='circles',
+                  node_scale=40,
+                  node_alpha=1,
                   arrowaxis=None,
-                  subtitles='circles',
-                  fig=fig, ax=ax)
+                  title='circles',
+                  subtitles=None)
+plt.show()
+```
+![](./figures/node_circles.png)
 
+```python
 # Spheres
-ax = fig.add_subplot(132, projection='3d')
 netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                             'desc': '100Parcels7Networks',
                             'resolution': 1},
                   template='MNI152NLin6Asym',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='S',
-                  nodetype='spheres',
-                  nodealpha=1,
+                  node_type='spheres',
+                  node_alpha=1,
                   arrowaxis=None,
-                  subtitles='spheres',
-                  fig=fig, ax=ax)
+                  title='spheres',
+                  subtitles=None)
+plt.show()
+```
+![](./figures/node_spheres.png)
 
+```python
 # Parcels
-ax = fig.add_subplot(133, projection='3d')
 netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                            'desc': '100Parcels7Networks',
                            'resolution': 1},
                   template='MNI152NLin6Asym',
-                  templatestyle=None,
+                  template_style=None,
                   view='S',
-                  nodetype='parcels',
-                  nodealpha=1,
-                  nodecolor='tab20c',
+                  node_type='parcels',
+                  node_alpha=1,
+                  node_color='tab20c',
                   arrowaxis=None,
-                  subtitles='parcels',
-                  fig=fig, ax=ax)
-
+                  title='parcels',
+                  subtitles=None)
 plt.show()
 ```
-![](./figures/node_types.png)
+![](./figures/node_parcels.png)
 
 ### Customize nodes
 
