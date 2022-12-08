@@ -85,10 +85,11 @@ plt.show()
 ```python
 # Plot glass style 
 netplotbrain.plot(template='MNI152NLin6Asym',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='S',
                   arrowaxis=None,
-                  subtitles='glass')
+                  title='glass',
+                  subtitles=None)
  plt.show()
  ```
 ![](./figures/glass_template.png)
@@ -96,10 +97,11 @@ netplotbrain.plot(template='MNI152NLin6Asym',
 ```python
 # Plot surface style 
 netplotbrain.plot(template='MNI152NLin6Asym',
-                  templatestyle='surface',
+                  template_style='surface',
                   view='S',
                   arrowaxis=None,
-                  subtitles='surface')
+                  title='surface',
+                  subtitles=None)
 plt.show()
  ```
 ![](./figures/surface_template.png)
@@ -107,10 +109,11 @@ plt.show()
 ```python
 # Plot filled style 
 netplotbrain.plot(template='MNI152NLin6Asym',
-                  templatestyle='filled',
+                  template_style='filled',
                   view='S',
                   arrowaxis=None,
-                  subtitles='filled')
+                  title='filled',
+                  subtitles=None)
 plt.show()
  ```
 ![](./figures/filled_template.png)
@@ -118,13 +121,14 @@ plt.show()
 ```python
 # Plot cloudy style 
 netplotbrain.plot(template='MNI152NLin6Asym',
-                  templatestyle='cloudy',
-                  templatevoxelsize=2,
-                  templatealpha=0.065,
+                  template_style='cloudy',
+                  template_voxelsize=2,
+                  template_alpha=0.065,
                   view='S',
-                  templateedgethreshold=0.6,
+                  template_edgethreshold=0.6,
                   arrowaxis=None,
-                  subtitles='cloudy')
+                  title='cloudy',
+                  subtitles=None)
 plt.show()
 ```
 ![](./figures/cloudy_template.png)
