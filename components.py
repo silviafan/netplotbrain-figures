@@ -14,11 +14,11 @@ fig  = plt.figure()
 # Plot only template
 ax = fig.add_subplot(141, projection='3d')
 netplotbrain.plot(template='MNI152NLin6Asym',
-                  templatestyle='surface',
-                  templatealpha=0.08,
+                  template_style='surface',
+                  template_alpha=0.08,
                   view='L',
                   arrowaxis=None,
-                  subitles=None,
+                  title=None,
                   fig=fig, ax=ax)
 
 # Plot only nodes
@@ -27,12 +27,12 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                            'desc': '100Parcels7Networks',
                            'resolution': 1},
                   template='MNI152NLin6Asym',
-                  templatestyle=None,
-                  templatealpha=0.08,
-                  nodetype='spheres',
+                  template_style=None,
+                  template_alpha=0.08,
+                  node_type='spheres',
                   view='L',
                   arrowaxis=None,
-                  subtitles=None,
+                  title=None,
                   fig=fig, ax=ax)
 # Plot only edges
 ax = fig.add_subplot(143, projection='3d')
@@ -41,13 +41,12 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                            'resolution': 1},                  
                  edges=edges,
                  template='MNI152NLin6Asym',
-                 templatestyle=None,
+                 template_style=None,
                  view='L',
-                 nodealpha=0,
-                 edgeweights='weight',
-                 edgealpha=5,
+                 node_alpha=0,
+                 edge_weights='weight',
                  arrowaxis=None,
-                 subtitles=None,
+                 title=None,
                  fig=fig, ax=ax)
 
 # Plot template, nodes, and edges together
@@ -57,15 +56,12 @@ netplotbrain.plot(nodes={'atlas': 'Schaefer2018',
                            'resolution': 1},                                    
                  edges=edges,
                  template='MNI152NLin6Asym',
-                 templatestyle='surface',
-                 templatealpha=0.08,
+                 template_style='surface',
                  view='L',
-                 nodetype='spheres',
-                 nodecolor='Salmon',
-                 edgeweights='weight',
-                 edgealpha=5,
+                 node_type='spheres',
+                 edge_weights='weight',
                  arrowaxis=None,
-                 subtitles=None,
+                 title=None,
                  fig=fig, ax=ax)
 
 fig.savefig('./figures/single_components.png', dpi=300)
