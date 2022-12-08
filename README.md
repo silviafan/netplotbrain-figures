@@ -306,19 +306,16 @@ plt.show()
 # 6 views
 netplotbrain.plot(nodes=nodes,
                   edges=edges,
-                  edgescale=5,
-                  edgealpha=3,
+                  edge_scale=5,
                   template='MNI152NLin6Asym',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='preset-6',
-                  nodecolor='community',
-                  nodecmap='viridis',
-                  nodetype='circles',
-                  nodescale=30,
-                  nodealpha=1,
+                  node_color='community',
+                  node_cmap='viridis',
+                  node_scale=30,
+                  node_alpha=1,
                   arrowaxis=None,
-                  showlegend=False)
-                  
+                  showlegend=False)                  
 plt.show()
 ```
 ![](./figures/preset6.png)
@@ -327,19 +324,16 @@ plt.show()
 # 4 views
 netplotbrain.plot(nodes=nodes,
                   edges=edges,
-                  edgescale=5,
-                  edgealpha=3,
+                  edge_scale=5,
                   template='MNI152NLin6Asym',
-                  templatestyle='glass',
+                  template_style='glass',
                   view='preset-4',
-                  nodecolor='community',
-                  nodecmap='viridis',
-                  nodetype='circles',
-                  nodescale=30,
-                  nodealpha=1,
+                  node_color='community',
+                  node_cmap='viridis',
+                  node_scale=30,
+                  node_alpha=1,
                   arrowaxis=None,
                   showlegend=False)
-                  
 plt.show()
 ```
 ![](./figures/preset4.png)
@@ -349,19 +343,16 @@ plt.show()
 ```python
 netplotbrain.plot(nodes=nodes,
                   edges=edges,
-                  edgescale=5,
-                  edgealpha=3,
+                  edge_scale=5,
                   template='MNI152NLin6Asym',
-                  templatestyle='glass',
-                  view=['AP'],
+                  template_style='glass',
+                  view='AP',
                   frames=4,
-                  nodecolor='community',
-                  nodecmap='viridis',
-                  nodetype='circles',
-                  nodescale=30,
-                  nodealpha=1,
-                  showlegend=False)
-                  
+                  node_color='community',
+                  node_cmap='viridis',
+                  node_scale=30,
+                  node_alpha=1,
+                  showlegend=False)                  
 plt.show()
 ```
 ![](./figures/4framesrot.png)
@@ -371,19 +362,16 @@ plt.show()
 ```python
 netplotbrain.plot(nodes=nodes,
                   edges=edges,
-                  edgescale=5,
-                  edgealpha=3,
+                  edge_scale=5,
                   template='MNI152NLin6Asym',
-                  templatestyle='glass',
-                  view=['AP'],
+                  template_style='glass',
+                  view='AP',
                   frames=5,
-                  nodecolor='community',
-                  nodecmap='viridis',
-                  nodetype='circles',
-                  nodescale=30,
-                  nodealpha=1,
+                  node_color='community',
+                  node_cmap='viridis',
+                  node_scale=30,
+                  node_alpha=1,
                   showlegend=False)
-                  
 plt.show()
 ```
 ![](./figures/5framesrot.png)
