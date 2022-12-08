@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 
 nodes = pd.read_csv('./example_nodes.tsv', sep='\t', index_col=0)
 edges = pd.read_csv('./example_edges.tsv', sep='\t', index_col=0)
+nodes_custom = pd.read_csv('./example_nodes_fig_4.csv', sep='\t', index_col=0)
 
 ```
 
